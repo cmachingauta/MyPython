@@ -56,7 +56,7 @@ for i in range(len(Title)):
 
 #2. Printing directly to csv:
 import sys
-filename  = open("C:\Users\wb355347\Desktop\Misc\PythonPractice\moviedata.csv",'w')
+filename  = open("path...\moviedata.csv",'w')
 sys.stdout = filename
 print Heading
 for i in range(len(Title)):
