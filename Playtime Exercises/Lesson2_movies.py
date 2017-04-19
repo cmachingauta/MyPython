@@ -50,7 +50,7 @@ Heading = ','.join(Header)
 
 print Heading
 
-for i in range(len(Header)):
+for i in range(len(Title)):
      print str(Title[i])+",", str(Rating[i])+",", str(Bechdel[i])+",", str(IMDB[i])+",", str(Genre[i]) 
 
 
@@ -59,7 +59,7 @@ import sys
 filename  = open("C:\Users\wb355347\Desktop\Misc\PythonPractice\moviedata.csv",'w')
 sys.stdout = filename
 print Heading
-for i in range(len(Header)):
+for i in range(len(Title)):
      print str(Title[i])+",", str(Rating[i])+",", str(Bechdel[i])+",", str(IMDB[i])+",", str(Genre[i]) 
 
 exit()
