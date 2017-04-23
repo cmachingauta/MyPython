@@ -115,20 +115,24 @@ u'São Tomé and Principe', \
 'Zanzibar', \
 'Zimbabwe']
 
-import codecs
-#
-file = codecs.open("C:\Users\Paida\Desktop\PythonLessons\UnicodeCountries.html",'w','utf-8-sig')
-#arguments 'w' -> for only writing. An existing file with the same name will be erased.
-# 'a' would append to the file
-# 'utf-8-sig' ->: On encoding a utf-8 encoded BOM will be prepended to the UTF-8 encoded bytes
+# opening a text file in python:
+# import codecs
+# f = codecs.open(filename, encoding="utf-8") > when you open a file that has certain encoding, you should always use the codecs module, rather than doing f = open(filename)
+#arguments 'w' -> for only writing. An existing file with the same name will be erased. 'a' would append to the file
+# 'utf-8-sig' ->: In some areas, it is also convention to use a Byte Order marker (BOM) at the start of UTF-8 encoded files;
+#the name is misleading since UTF-8 is not byte-order dependent.The mark simply announces that the file
+#is encoded in UTF-8. Use the ‘utf-8-sig’ codec to automatically skip the mark if present for reading such files
 
-#Print to file
+import codecs
+file = codecs.open("C:\Users\Paida\Desktop\PythonLessons\UnicodeCountries.html",'w','utf-8-sig')
+
+#Option 1: Print to file
 ##print >>file, '<select name="Countries">'
 ##for ISO_CODE, country in zip(ISO_CODE, country):
 ##   print >>file, u"\t\t\t<option value='{}'>{}</option>".format(ISO_CODE,country)
 ##print >>file, "<select>"
 
-# Write to file 
+#Option 2: Write to file 
 file.write('<select name="Countries">')
 for ISO_CODE, country in zip(ISO_CODE, country):
    file.write(u"\t\t\t<option value='{}'>{}</option>".format(ISO_CODE,country))
