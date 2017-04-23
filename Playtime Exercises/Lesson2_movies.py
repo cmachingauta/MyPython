@@ -39,29 +39,25 @@
 
 # Creating variables
 Header = ['Title', 'Rating', 'Bechdel', 'IMDB', 'Genre']
-Title = ['A Fish Called Wanda',"Daddy's Home",'Guardians of the Galaxy', 'Jack Reacher','S1m0ne']
-Rating = ['R','PG-13','PG-13','PG-13','PG-13']
-Bechdel = [3,1,3,1,3]
-IMDB = [7.6,6.1,9.0,7.0,6.1]
-Genre = ['Comedy/Crime','Comedy/Family','Action/Adventure','Action/Crime','Comedy/Drama']
+Title = ['A Fish Called Wanda',"Daddy's Home",'Guardians of the Galaxy', 'Jack Reacher','S1m0ne','Hidden Figures']
+Rating = ['R','PG-13','PG-13','PG-13','PG-13','PG']
+Bechdel = [3,1,3,1,3,3]
+IMDB = [7.6,6.1,9.0,7.0,6.1,7.9]
+Genre = ['Comedy/Crime','Comedy/Family','Action/Adventure','Action/Crime','Comedy/Drama','Biography/Drama/History']
 Heading = ','.join(Header)
 
 #1. Printing to console then copying, pasting and saving file as movies.csv
 
-print Heading
-
-for i in range(len(Title)):
-     print str(Title[i])+",", str(Rating[i])+",", str(Bechdel[i])+",", str(IMDB[i])+",", str(Genre[i]) 
+##print Heading
+##
+##for i in range(len(Title)):
+##     print str(Title[i])+",", str(Rating[i])+",", str(Bechdel[i])+",", str(IMDB[i])+",", str(Genre[i]) 
 
 
 #2. Printing directly to csv:
-import sys
-filename  = open("path...\moviedata.csv",'w')
-sys.stdout = filename
-print Heading
+file  = open("C:\Users\Paida\Desktop\PythonLessons\moviedata.csv",'w')
+print >>file,Heading
 for i in range(len(Title)):
-     print str(Title[i])+",", str(Rating[i])+",", str(Bechdel[i])+",", str(IMDB[i])+",", str(Genre[i]) 
+     print >>file,str(Title[i])+",", str(Rating[i])+",", str(Bechdel[i])+",", str(IMDB[i])+",", str(Genre[i])
 
-exit()
-
-
+file.close()
