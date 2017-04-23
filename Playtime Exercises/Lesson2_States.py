@@ -1,4 +1,4 @@
-# -*- coding: -utf-8 -*-
+# This program generates a drop down menu of states.
 
 Abbrev=[' ',\
 'AL', \
