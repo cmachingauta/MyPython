@@ -1,5 +1,6 @@
 # -*- coding: -utf-8 -*-
-#
+
+#This program creates a drop down menu of countries, with utf-8 encoding.
 
 ISO_CODE=[' ',\
 'DZA', \
