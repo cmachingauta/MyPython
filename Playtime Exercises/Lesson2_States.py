@@ -1,6 +1,7 @@
 # -*- coding: -utf-8 -*-
 
-Abbrev=['AL', \
+Abbrev=[' ',\
+'AL', \
 'AK', \
 'AZ', \
 'AR', \
@@ -51,7 +52,8 @@ Abbrev=['AL', \
 'WI', \
 'WY']
 
-state=['Alabama', \
+state=[' ',\
+'Alabama', \
 'Alaska', \
 'Arizona', \
 'Arkansas', \
